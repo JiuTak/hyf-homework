@@ -18,11 +18,6 @@ body {
     background: linear-gradient(to right, var(--color-primary-blue), var(--color-primary-purple));
 }
 
-.wrapper {
-    width: 100%;
-    height: 100%;
-}
-
 .resume {
     width: min(80%, 70.5rem);
     min-height: 100%;
@@ -253,12 +248,11 @@ body {
 
 footer {
     background: var(--color-bg-darkgray);
-    width: min(80%, 70.5rem);
-    height: 5%;
-    bottom: 0;
+    /* width: min(80%, 70.5rem); */
+    height: 2%;
     color: #fff;
-    position: absolute;
     text-align: center;
+    
 }
 @media (max-width: 1330px) {
     .information {
