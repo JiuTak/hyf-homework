@@ -23,10 +23,17 @@ body {
 }
 
 .resume {
-  width: min(80%, 70.5rem);
+  width: 80%;
   min-height: 100%;
   background: #fff;
   margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-area {
+  width: 100%;
+  min-height: 100%;
   display: flex;
 }
 
@@ -267,8 +274,6 @@ nav {
 
 footer {
   background: var(--color-bg-darkgray);
-  /* width: min(80%, 70.5rem); */
-  height: 2%;
   color: #fff;
   text-align: center;
 }
@@ -324,7 +329,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .resume {
+  .main-area {
     flex-direction: column;
   }
 
