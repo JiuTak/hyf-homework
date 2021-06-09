@@ -28,8 +28,11 @@ nav {
   margin: 1em;
 }
 
+nav p {
+  padding: 1em;
+}
+
 nav a {
-  /* padding: 1em 3em 0 0; */
   width: 10em;
   height: 3em;
   text-decoration: none;
@@ -79,8 +82,9 @@ h4 {
 }
 
 .col-right .logos img {
-  width: 100px;
-  margin: 2rem;
+  width: 1.5rem;
+  padding: 0.8rem;
+  margin: 0.4rem;
   flex: 0 1 calc(24% - 8px);
 }
 
@@ -107,6 +111,7 @@ footer ul {
 footer ul .list-wrapper {
   position: relative;
   display: flex;
+  padding: 0 2rem;
 }
 
 footer .content {
@@ -114,7 +119,7 @@ footer .content {
 }
 
 footer h6 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   text-transform: uppercase;
   margin-block-end: unset;
 }
@@ -131,23 +136,31 @@ footer h6 {
   align-items: center;
   color: #fff;
 }
-
+/* 
 @media (min-width: 1025px) {
+  header {
+    padding: 2rem;
+  }
+
+  nav {
+    padding: 0;
+  }
+
   .top-article,
   .bottom-article {
-    margin: 0 10em;
+    margin: 0 10rem;
   }
 
   .col-right .logos img {
-    width: 2em;
-    padding: 2em;
-    margin: 0.5em;
+    width: 1.5rem;
+    padding: 2.5rem;
+    margin: 0.5rem;
   }
 
   footer {
     padding: 0;
   }
-}
+} */
 
 @media (min-width: 769px) and (max-width: 1024px) {
   header {
@@ -164,8 +177,9 @@ footer h6 {
   }
 
   .col-right .logos img {
-    width: 3em;
-    margin: 0.5em;
+    width: 3rem;
+    margin: 0.3rem;
+    padding: 0.7rem;
   }
 
   footer {
@@ -174,6 +188,17 @@ footer h6 {
 
   footer h6 {
     padding-bottom: 0.75em;
+    font-size: 1rem;
+  }
+
+  footer .map iframe {
+    width: 100px;
+    height: 100px;
+  }
+
+  footer p,
+  a {
+    font-size: 0.8rem;
   }
 }
 
@@ -184,11 +209,61 @@ footer h6 {
 
   nav {
     padding: 0 4em;
+    margin: 0;
   }
 
   .top-article,
   .bottom-article {
-    margin: 0 2em;
+    display: block;
+    margin: unset;
+  }
+
+  .col-right,
+  .col-left {
+    width: 100%;
+    padding: 1.5rem;
+    margin: 0;
+  }
+
+  main h2 {
+    font-size: 1.25em;
+  }
+
+  main h4 {
+    font-size: 1em;
+  }
+
+  main p,
+  footer p,
+  a {
+    font-size: 0.75em;
+  }
+
+  .col-right .logos img {
+    width: 20px;
+    margin: 0.4rem;
+    padding: 2.125rem;
+    flex: 0 1 calc(24% - 8px);
+  }
+
+  footer {
+    padding: unset;
+  }
+
+  footer .content {
+    padding: 1em;
+  }
+  footer h6 {
+    font-size: 1.25rem;
+  }
+
+  footer p,
+  a {
+    font-size: 1rem;
+  }
+
+  footer ul {
+    display: block;
   }
 }
 
@@ -205,8 +280,12 @@ footer h6 {
     padding: 0 1em;
   }
 
+  nav p {
+    padding: 0.5em;
+  }
+
   nav a {
-    font-size: 0.875em;
+    font-size: 0.75em;
   }
 
   .top-article,
@@ -243,6 +322,7 @@ footer h6 {
   footer {
     padding: unset;
   }
+
   footer .content {
     padding: 1em;
   }
