@@ -317,6 +317,7 @@ footer h6 {
   .col-right,
   .col-left {
     margin: 1em;
+    width: fit-content;
   }
 
   footer {
