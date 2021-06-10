@@ -9,7 +9,7 @@
 header {
   background: var(--color-light-gray);
   height: 40%;
-  padding: 3em 20em;
+  padding: 3rem 20rem;
 }
 
 header h1,
@@ -23,18 +23,18 @@ header p {
 }
 
 nav {
-  padding: 0 19em;
+  padding: 0 19rem;
   display: flex;
-  margin: 1em;
+  margin: 1rem;
 }
 
 nav p {
-  padding: 1em;
+  padding: 1rem;
 }
 
 nav a {
-  width: 10em;
-  height: 3em;
+  width: 10rem;
+  height: 3rem;
   text-decoration: none;
   color: black;
   font-weight: 500;
@@ -46,32 +46,28 @@ nav a:hover {
   cursor: pointer;
 }
 
-.img-holder {
-  text-align: center;
+img {
+  width: 100%;
+  height: auto;
 }
 
-.img-holder img {
-  max-width: 100%;
-  height: auto;
-  background-size: cover;
-}
 h4 {
   text-transform: uppercase;
 }
 
-.top-article,
-.bottom-article {
+.top-content,
+.bottom-content {
   display: flex;
-  margin: 0 18em;
+  margin: 0 18rem;
 }
 
 .col-left {
-  margin: 2em;
+  margin: 2rem;
   width: 50%;
 }
 
 .col-right {
-  margin: 2.5em;
+  margin: 2.5rem;
   width: 100%;
 }
 
@@ -85,7 +81,7 @@ h4 {
   width: 1.5rem;
   padding: 0.8rem;
   margin: 0.4rem;
-  flex: 0 1 calc(24% - 8px);
+  flex: 0 1 calc(24% - 8px); /*this is for align 4 items in a row, 24% -8 is for adjusting margin part */
 }
 
 footer {
@@ -93,7 +89,7 @@ footer {
   width: 100%;
   justify-content: space-around;
   color: #fff;
-  padding: 0 18em;
+  padding: 0 18rem;
 }
 
 footer .map iframe {
@@ -136,44 +132,19 @@ footer h6 {
   align-items: center;
   color: #fff;
 }
-/* 
-@media (min-width: 1025px) {
-  header {
-    padding: 2rem;
-  }
-
-  nav {
-    padding: 0;
-  }
-
-  .top-article,
-  .bottom-article {
-    margin: 0 10rem;
-  }
-
-  .col-right .logos img {
-    width: 1.5rem;
-    padding: 2.5rem;
-    margin: 0.5rem;
-  }
-
-  footer {
-    padding: 0;
-  }
-} */
 
 @media (min-width: 769px) and (max-width: 1024px) {
   header {
-    padding: 2em 4em;
+    padding: 2rem 4rem;
   }
 
   nav {
-    padding: 0 3em;
+    padding: 0 3rem;
   }
 
-  .top-article,
-  .bottom-article {
-    margin: 0 5em;
+  .top-content,
+  .bottom-content {
+    margin: 0 5rem;
   }
 
   .col-right .logos img {
@@ -187,7 +158,7 @@ footer h6 {
   }
 
   footer h6 {
-    padding-bottom: 0.75em;
+    padding-bottom: 0.75rem;
     font-size: 1rem;
   }
 
@@ -204,16 +175,16 @@ footer h6 {
 
 @media (min-width: 481px) and (max-width: 768px) {
   header {
-    padding: 3em 5em;
+    padding: 3rem 5rem;
   }
 
   nav {
-    padding: 0 4em;
+    padding: 0 4rem;
     margin: 0;
   }
 
-  .top-article,
-  .bottom-article {
+  .top-content,
+  .bottom-content {
     display: block;
     margin: unset;
   }
@@ -226,17 +197,17 @@ footer h6 {
   }
 
   main h2 {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
 
   main h4 {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   main p,
   footer p,
   a {
-    font-size: 0.75em;
+    font-size: 0.75rem;
   }
 
   .col-right .logos img {
@@ -251,7 +222,7 @@ footer h6 {
   }
 
   footer .content {
-    padding: 1em;
+    padding: 1rem;
   }
   footer h6 {
     font-size: 1.25rem;
@@ -269,7 +240,7 @@ footer h6 {
 
 @media (max-width: 480px) {
   header {
-    padding: 1em 2em;
+    padding: 1rem 2rem;
   }
 
   header h6 {
@@ -277,46 +248,46 @@ footer h6 {
   }
 
   nav {
-    padding: 0 1em;
+    padding: 0 1rem;
   }
 
   nav p {
-    padding: 0.5em;
+    padding: 0.5rem;
   }
 
   nav a {
-    font-size: 0.75em;
+    font-size: 0.75rem;
   }
 
-  .top-article,
-  .bottom-article {
+  .top-content,
+  .bottom-content {
     display: block;
     margin: unset;
   }
 
   main h2 {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
 
   main h4 {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   main p,
   footer p,
   a {
-    font-size: 0.75em;
+    font-size: 0.75rem;
   }
 
   .col-right .logos img {
-    width: 1em;
-    padding: 1em;
-    margin: 0.5em;
+    width: 1rem;
+    padding: 1rem;
+    margin: 0.5rem;
   }
 
   .col-right,
   .col-left {
-    margin: 1em;
+    margin: 1rem;
     width: fit-content;
   }
 
@@ -325,10 +296,10 @@ footer h6 {
   }
 
   footer .content {
-    padding: 1em;
+    padding: 1rem;
   }
   footer h6 {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 
   footer ul {
