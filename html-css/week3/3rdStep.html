@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Week3 homework(Jiu)</title>
+</head>
+
+<body>
+    <div class="intro">
+        <div class="logo">
+            <a href="">Logo</a>
+        </div>
+        <nav> 
+            <a href="">Naviation</a>
+        </nav>
+    </div>
+
+    <header>
+        <h1>Sign up to yourcustomtailor.com</h1>        
+    </header>
+    
+    <div class="form-area">
+        <h2>Step 3/4 - Time to learn about your preferences?</h2>
+        <div class="progress-area">            
+            <h3>Progress</h3>    
+            <div class="progress-bar-container">
+                <div class="progress-status third-step">
+                </div>
+            </div>
+            <p>What kind of items are you interested in offers on?</p>
+        </div>
+
+        <form action="personal-info" method="get" class="personal-info-form">
+            <div class="info-detail">
+                <div class="col-left form-field">                
+                    <label class="form-label" for="email">Email*</label>
+                    <input  class="form-input" type="email" id="email" name="email" required>
+                </div>
+                <div class="col-right form-field">                
+                    <label class="form-label" for="phone">Phone</label>
+                    <input class="form-input" type="phone" id="phone" name="phone">
+                </div>
+            </div>
+
+            <div class="info-detail">
+                <div class="col-left form-field">                
+                    <label class="form-label" for="password">Password*</label>
+                    <input  class="form-input" type="password" id="password" name="password" required>
+                </div>
+            </div>
+            <div class="info-detail">
+                <div class="col-left form-field">
+                    <label class="form-label" for="re-password">Re-enter Password*</label>
+                    <input class="form-input" type="password" id="re-password" name="re-password" required>
+                </div>
+            </div>
+        </form>
+
+        <p>Choose the images that best resemble your style</p>
+        <div class="info-checkbox form-field">                
+            <div class="news">
+                <div class="col-left form-field">
+                    <label class="form-label">Weekly news</label>
+                    <input type="checkbox" checked>
+                
+                    <label class="form-label">Monthly news</label>
+                    <input type="checkbox">
+                    
+                    <label class="form-label">Don't send me news</label>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="col-right">
+                <a href="#" class="btn">Next step</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
