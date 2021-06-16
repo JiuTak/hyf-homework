@@ -37,21 +37,21 @@
             <p>Nice to meet you. Let's spend a minute to get to know each other? Please enter the following:</p>
         </div>
 
-        <form action="personal-info" method="get" class="personal-info-form">
+        <form action="./2ndStep.html" method="get" class="personal-info-form">
             <div class="info-name">
                 <div class="col-left form-field">                
                     <label class="form-label" for="first-name">First name*</label>
-                    <input  class="form-input" type="text" id="first-name" name="user-first-name" required>
+                    <input  class="form-input" type="text" id="first-name" name="user-first-name" maxlength="20" required>
                 </div>
                 <div class="col-right form-field">                
                     <label class="form-label" for="last-name">Last name*</label>
-                    <input class="form-input" type="text" id="last-name" name="user-last-name" required>
+                    <input class="form-input" type="text" id="last-name" name="user-last-name" maxlength="10" required>
                 </div>
             </div>
             <div class="info-country">
                 <div class="col-left form-field">
                     <label class="form-label" for="country">Country*</label>
-                    <select class="form-input" id="country" name="country">
+                    <select class="form-input" id="country" name="country" required>
                         <option value=" "> </option>
                         <option value="Afganistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
@@ -305,11 +305,11 @@
             <div class="info-address">
                 <div class="col-left form-field">                    
                     <label class="form-label" for="street-address">Street address*</label>
-                    <input class="form-input" type="text" id="street-address" name="user-adress" required>
+                    <input class="form-input" type="text" id="street-address" name="user-adress" maxlength="50" required>
                 </div>
                 <div class="col-right form-field">
                     <label class="form-label" for="post-code">Post code*</label>
-                    <input class="form-input" type="number" id="post-code" name="user-adress" required>
+                    <input class="form-input" type="number" id="post-code" name="user-adress" maxlength="8" required>
                 </div>
             </div>              
             <div class="info-description">
@@ -318,21 +318,24 @@
                     <p>Please provide a short description of yourself to be displayed on our social community pages.</p>
                 </div>
                 <div class="des-input">
-                    <textarea id="description" name="user-message"></textarea>
+                    <textarea id="description" name="user-message" maxlength="800"></textarea>
                 </div>
             </div>
 
-        </form>
-        <p>Use the same address for billing and shipping? Uncheck below to fill out a separate shipping adress.</p>
-        <div class="info-checkbox form-field">                
-            <div class="col-left form-field">
-                <label class="form-label">Shipping adress</label>
-                <input type="checkbox" checked>
+            <p>Use the same address for billing and shipping? Uncheck below to fill out a separate shipping adress.</p>
+            <div class="info-checkbox form-field">                
+                <div class="col-left form-field">
+                    <label class="form-label">Shipping adress</label>
+                    <input type="checkbox" checked>
+                </div>
             </div>
-        </div>
-        <div class="col-right next-button">
-            <a href="./2ndStep.html" class="btn">Next step</a>
-        </div>
+    
+            <div class="nextstep-btn">            
+                <input type="submit" class="next-button btn" id="button" name="button" value="Next step">
+                <!-- <a href="./2ndStep.html">
+                </a>           -->
+            </div>
+        </form>
     </div>
 </body>
 </html>

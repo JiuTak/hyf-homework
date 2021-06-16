@@ -146,14 +146,15 @@ textarea {
   height: 25px;
 }
 
-.next-button {
-  position: relative;
+.nextstep-btn {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-.next-button a {
+.next-button {
+  position: relative;
   text-decoration: none;
   color: black;
-  flex-direction: row;
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -162,14 +163,13 @@ textarea {
   text-align: right;
 }
 
-/* .news {
-  flex-direction: row;
-  justify-content: space-between;
-} */
-
 .news .col-left {
   width: 100%;
   margin-bottom: 5rem;
+}
+
+.news {
+  width: 100%;
 }
 
 .btn {
@@ -178,4 +178,108 @@ textarea {
   display: inline-block;
   border: rgb(172, 171, 171) 3px solid;
   padding: 25px 100px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+}
+
+.categories label {
+  font-size: 1rem;
+}
+
+.categories input,
+.decision input {
+  width: 25px;
+  height: 25px;
+}
+
+.style-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.style-selection {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  flex: 0 1 calc(20% - 8px); /*this is for align 4 items in a row, 24% -8 is for adjusting margin part */
+}
+
+.decision {
+  position: relative;
+  text-align: right;
+  margin: 0.5rem;
+  font-size: 1.325rem;
+  width: 200px;
+}
+
+.style-selection img {
+  width: 200px;
+  height: 200px;
+  border: black 1px solid;
+}
+
+.style-selection label {
+  text-align: right;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .personal-info-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-name,
+  .info-country,
+  .info-address,
+  .info-detail {
+    flex-direction: column;
+  }
+
+  .col-left,
+  .col-right {
+    width: 100%;
+    padding-right: 2rem;
+  }
+
+  .form-label {
+    width: 110px;
+  }
+
+  .des-title {
+    padding: 0;
+  }
+
+  .form-field {
+    padding: 2rem 0;
+  }
+  .info-name,
+  .info-country,
+  .info-address,
+  .info-description,
+  .info-checkbox,
+  .info-detail {
+    padding: 0rem 2.5rem;
+  }
+
+  .news .col-left {
+    margin-bottom: 2rem;
+    justify-content: flex-end;
+  }
+
+  .news .col-left > .form-label {
+    width: 150px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
 }
