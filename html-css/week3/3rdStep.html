@@ -11,130 +11,119 @@
 </head>
 
 <body>
-    <div class="intro">
-        <div class="logo">
-            <a href="">Logo</a>
+    <div class="outer-container">
+        <div class="intro">
+            <div class="logo">
+                <a href="./index.html"><img src="./icons/logobasket.svg"></a>
+            </div>
+            <nav>
+                <a href="">Naviation</a>
+            </nav>
         </div>
-        <nav> 
-            <a href="">Naviation</a>
-        </nav>
-    </div>
-
-    <header>
-        <h1>Sign up to yourcustomtailor.com</h1>        
-    </header>
-    
-    <div class="form-area">
-        <h2>Step 3/4 - Time to learn about your preferences?</h2>
-        <div class="progress-area">            
-            <h3>Progress</h3>    
-            <div class="progress-bar-container">
-                <div class="progress-status third-step">
+        <header>
+            <h1>Sign up to yourcustomtailor.com</h1>
+        </header>
+        
+        <div class="form-area">
+            <h2>Step 3/4 - Time to learn about your preferences?</h2>
+            <div class="progress-area">
+                <h3>Progress</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-status third-step">
+                    </div>
                 </div>
+                <p>What kind of items are you interested in offers on?</p>
             </div>
-            <p>What kind of items are you interested in offers on?</p>
-        </div>
-
-        <form action="personal-info" method="get" class="categories">
-            <div>
-                <div class="form-field">
-                    <label class="form-label">Apparal</label>
-                    <input type="checkbox" class="form-input" checked>
+            <form action="personal-info" method="get" class="categories">
+                <div>
+                    <div class="form-field">
+                        <label class="form-label">Apparal</label>
+                        <input type="checkbox" class="form-input" checked>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Jewelry</label>
+                        <input type="checkbox" class="form-input" checked>
+                    </div>
+                     <div class="form-field">
+                        <label class="form-label">Handbags</label>
+                        <input type="checkbox" class="form-input">
+                    </div>
                 </div>
-                <div class="form-field">
-                    <label class="form-label">Jewelry</label>
-                    <input type="checkbox" class="form-input" checked>
+                <div>
+                    <div class="form-field">
+                        <label class="form-label">Accessories</label>
+                        <input type="checkbox" class="form-input" checked>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Shoes</label>
+                        <input type="checkbox" class="form-input" checked>
+                    </div>
                 </div>
-                 <div class="form-field">
-                    <label class="form-label">Handbags</label>
-                    <input type="checkbox" class="form-input">
+            </form>
+            <p>Choose the images that best resemble your style</p>
+                <div class="style-container">
+                    <div class="style-selection">
+                        <img src="./icons/dress_fashion_icon.svg">
+                        <div class="decision">
+                            <label>Select</label>
+                            <input type="checkbox" checked>
+                        </div>
+                    </div>
+                    <div class="style-selection">
+                        <img src="./icons/fashion_jacket_icon.svg">
+                        <div class="decision">
+                            <label>Select</label>
+                            <input type="checkbox" checked>
+                        </div>
+                    </div>
+                    <div class="style-selection">
+                        <img src="./icons/fashion_dress_icon.svg">
+                        <div class="decision">
+                            <label>Select</label>
+                            <input type="checkbox" checked>
+                        </div>
+                    </div>
+                    <div class="style-selection">
+                        <img src="./icons/jacket_icon.svg">
+                        <div class="decision">
+                            <label>Select</label>
+                            <input type="checkbox" checked>
+                        </div>
+                    </div>
+                    <div class="style-selection">
+                        <img src="./icons/pullover_woman_clothing_icon.svg">
+                        <div class="decision">
+                            <label>Select</label>
+                            <input type="checkbox" checked>
+                        </div>
+                    </div>
+                    <div class="style-selection">
+                        <img src="./icons/sweater_icon.svg">
+                        <div class="decision">
+                            <label>Select</label>
+                            <input type="checkbox" checked>
+                        </div>
+                    </div>
+                    <div class="style-selection">
+                        <img src="./icons/shoes_icon.svg">
+                        <div class="decision">
+                            <label>Select</label>
+                            <input type="checkbox" checked>
+                        </div>
+                    </div>
+                    <div class="style-selection">
+                        <img src="./icons/dunk_nike_shoes_icon.svg">
+                        <div class="decision">
+                            <label>Select</label>
+                            <input type="checkbox" checked>
+                        </div>
+                    </div>
                 </div>
+            <div class="nextstep-btn">
+                <a href="">
+                    <input type="button" class="next-button btn" id="button" name="button" value="Next step">
+                </a>
             </div>
-
-            <div>
-                <div class="form-field">
-                    <label class="form-label">Accessories</label>
-                    <input type="checkbox" class="form-input" checked>
-                </div>
-                <div class="form-field">
-                    <label class="form-label">Shoes</label>
-                    <input type="checkbox" class="form-input" checked>
-                </div>
-            </div>
-
-        </form>
-
-        <p>Choose the images that best resemble your style</p>
-            <div class="style-container">
-                <div class="style-selection">
-                    <img src="">
-                    <div class="decision">
-                        <label>Select</label>
-                        <input type="checkbox" checked>
-                    </div>
-                </div>
-
-                <div class="style-selection">
-                    <img src="">
-                    <div class="decision">
-                        <label>Select</label>
-                        <input type="checkbox" checked>
-                    </div>
-                </div>
-
-                <div class="style-selection">
-                    <img src="">
-                    <div class="decision">
-                        <label>Select</label>
-                        <input type="checkbox" checked>
-                    </div>
-                </div>
-
-                <div class="style-selection">
-                    <img src="">
-                    <div class="decision">
-                        <label>Select</label>
-                        <input type="checkbox" checked>
-                    </div>
-                </div>
-
-                <div class="style-selection">
-                    <img src="">
-                    <div class="decision">
-                        <label>Select</label>
-                        <input type="checkbox" checked>
-                    </div>
-                </div>
-
-                <div class="style-selection">
-                    <img src="">
-                    <div class="decision">
-                        <label>Select</label>
-                        <input type="checkbox" checked>
-                    </div>
-                </div>
-
-                <div class="style-selection">
-                    <img src="">
-                    <div class="decision">
-                        <label>Select</label>
-                        <input type="checkbox" checked>
-                    </div>
-                </div>
-
-                <div class="style-selection">
-                    <img src="">
-                    <div class="decision">
-                        <label>Select</label>
-                        <input type="checkbox" checked>
-                    </div>
-                </div>
-            </div>
-
-        <div class="nextstep-btn">            
-            <a href="">
-                <input type="button" class="next-button btn" id="button" name="button" value="Next step">
-            </a>          
         </div>
     </div>
 </body>

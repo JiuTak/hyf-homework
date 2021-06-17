@@ -3,8 +3,28 @@
   font-family: "Noto Sans", sans-serif;
 }
 
+:root {
+  --color-primary-blue: #12086e;
+  --color-primary-purple: #543586;
+  --color-secondary-purple: #b294e2;
+  --color-bg-darkgray: #373638;
+}
+
 body {
-  padding: 3rem 1rem;
+  background: linear-gradient(
+    to right,
+    var(--color-primary-blue),
+    var(--color-primary-purple)
+  );
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.outer-container {
+  border: var(--color-bg-darkgray) 3px solid;
+  align-items: center;
+  padding: 3rem;
+  background-color: rgb(243, 233, 213);
 }
 
 p {
@@ -19,15 +39,13 @@ p {
   justify-content: space-between;
 }
 
-.intro a {
+.intro img {
   text-decoration: none;
-  color: black;
-  text-align: center;
-  align-items: center;
+  width: 100px;
+  height: 100px;
 }
 
 .logo {
-  border: gray 1px solid;
   width: 100px;
   height: 100px;
   display: flex;
