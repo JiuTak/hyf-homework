@@ -7,6 +7,7 @@ age = yearFuture - yearOfBirth;
 
 console.log("You will be " + age + " years old in " + yearFuture);
 
+
 /*---------------------------------------------------------------------------------------------*/
 // Goodboy - Oldboy(Adog age calculator)
 dogYearOfBirth = 2021;
@@ -16,7 +17,7 @@ dogYear = dogYearFuture - dogYearOfBirth;
 shouldShowResultInDogYears = true;
 
 if (shouldShowResultInDogYears == true) {
-    console.log("\n Your dog will be " + dogYear + " human years old in " + dogYearFuture);
+    console.log("\nYour dog will be " + dogYear + " human years old in " + dogYearFuture);
 }
 
 /*---------------------------------------------------------------------------------------------*/
@@ -33,7 +34,7 @@ function gardenSizeInM2(garden) {
     return garden * 300;
 }
 
-console.log("\n Julia's current rent is: " + juliasHouseCurrentPay);
+console.log("\nJulia's current rent is: " + juliasHouseCurrentPay);
 
 let juliesRightPayment = volumnInMeters(5, 11, 8) + gardenSizeInM2(70);
 console.log("Julia's right amount of rent is: " + juliesRightPayment);
@@ -44,7 +45,7 @@ if (juliesRightPayment > juliasHouseCurrentPay) {
     console.log("JULIA, YOU NEED TO RE-CONSIDER YOUR PLACE");
 }
 
-console.log("\n Peter's current rent is: " + petersHouseCurrentPay);
+console.log("\nPeter's current rent is: " + petersHouseCurrentPay);
 
 var petersRightPayment = volumnInMeters(8, 10, 10) + gardenSizeInM2(100);
 console.log("Peter's right amount of rent is: " + petersRightPayment);
@@ -64,4 +65,4 @@ const randomNumber = Math.floor(Math.random() * 10);
 
 const startupName = firstWords[randomNumber] + " " + secondWords[randomNumber];
 
-console.log("\n The startup: " + startupName + " contains " + startupName.length + " characters.");
+console.log("\nThe startup: " + startupName + " contains " + startupName.length + " characters.");
