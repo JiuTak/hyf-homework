@@ -16,7 +16,7 @@ dogYear = dogYearFuture - dogYearOfBirth;
 shouldShowResultInDogYears = true;
 
 if (shouldShowResultInDogYears == true) {
-    console.log("Your dog will be " + dogYear + " human years old in " + dogYearFuture);
+    console.log("\n Your dog will be " + dogYear + " human years old in " + dogYearFuture);
 }
 
 /*---------------------------------------------------------------------------------------------*/
@@ -33,7 +33,7 @@ function gardenSizeInM2(garden) {
     return garden * 300;
 }
 
-console.log("Julia's current rent is: " + juliasHouseCurrentPay);
+console.log("\n Julia's current rent is: " + juliasHouseCurrentPay);
 
 let juliesRightPayment = volumnInMeters(5, 11, 8) + gardenSizeInM2(70);
 console.log("Julia's right amount of rent is: " + juliesRightPayment);
@@ -41,10 +41,10 @@ console.log("Julia's right amount of rent is: " + juliesRightPayment);
 if (juliesRightPayment > juliasHouseCurrentPay) {
     console.log("It is good amount to pay compare your place's size Juila!");
 } else {
-    console.log("JULIa, YOU NEED TO RE-CONSIDER YOUR PLACE");
+    console.log("JULIA, YOU NEED TO RE-CONSIDER YOUR PLACE");
 }
 
-console.log("Peter's current rent is: " + petersHouseCurrentPay);
+console.log("\n Peter's current rent is: " + petersHouseCurrentPay);
 
 var petersRightPayment = volumnInMeters(8, 10, 10) + gardenSizeInM2(100);
 console.log("Peter's right amount of rent is: " + petersRightPayment);
@@ -57,11 +57,11 @@ if (petersRightPayment > petersHouseCurrentPay) {
 
 /*---------------------------------------------------------------------------------------------*/
 // Ez Namey(Startup name generator)
-const array = firstWords["Awesome", "Coolll", "Super", "Amazing", "Lovely", "Intelligent", "Gucci", "Best", "Dazzling", "Wonderful"];
-const array = secondWords["Corporation", "Firm", "Inc.", "Business", "Enterprise", "Establishment", "Organization", "Company", "Agency", "technology"];
+const firstWords = ["Awesome", "Coolll", "Super", "Amazing", "Lovely", "Intelligent", "Gucci", "Best", "Dazzling", "Wonderful"];
+const secondWords = ["Corporation", "Firm", "Inc.", "Business", "Enterprise", "Establishment", "Organization", "Company", "Agency", "technology"];
 
 const randomNumber = Math.floor(Math.random() * 10);
 
 const startupName = firstWords[randomNumber] + " " + secondWords[randomNumber];
 
-console.log("The startup: " + startupName + "contains " + startupName.length + "characters");
+console.log("\n The startup: " + startupName + " contains " + startupName.length + " characters.");
