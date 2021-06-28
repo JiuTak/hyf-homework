@@ -48,7 +48,7 @@ if (juliesRightPayment > juliasHouseCurrentPay) {
 console.log(`\nPeter 's current rent is: ${petersHouseCurrentPay}`);
 
 var petersRightPayment = volumnInMeters(8, 10, 10) + gardenSizeInM2(100);
-console.log(`Peter 's right amount of rent is: ${petersRightPayment}`);
+console.log("Peter 's right amount of rent is: " + `${petersRightPayment}`);
 
 if (petersRightPayment > petersHouseCurrentPay) {
     console.log("It is good amount to pay compare your place's size Peter!");
@@ -65,4 +65,6 @@ const randomNumber = Math.floor(Math.random() * 10);
 
 const startupName = firstWords[randomNumber] + " " + secondWords[randomNumber];
 
-console.log("\nThe startup: " + `${ startupName }` + " contains " + startupName.length + " characters.");
+console.log("\nThe startup: " + `
+        $ { startupName }
+        ` + " contains " + startupName.length + " characters.");
