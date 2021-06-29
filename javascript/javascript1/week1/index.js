@@ -22,8 +22,8 @@ if (shouldShowResultInDogYears == true) {
 
 /*---------------------------------------------------------------------------------------------*/
 // Housey pricey (A house price estimator)
-var petersHouseCurrentPay = 2500000;
-var juliasHouseCurrentPay = 1000000;
+const petersHouseCurrentPay = 2500000;
+const juliasHouseCurrentPay = 1000000;
 
 
 function volumnInMeters(w, d, h) {
@@ -47,7 +47,7 @@ if (juliesRightPayment > juliasHouseCurrentPay) {
 
 console.log(`\nPeter 's current rent is: ${petersHouseCurrentPay}`);
 
-var petersRightPayment = volumnInMeters(8, 10, 10) + gardenSizeInM2(100);
+let petersRightPayment = volumnInMeters(8, 10, 10) + gardenSizeInM2(100);
 console.log("Peter 's right amount of rent is: " + `${petersRightPayment}`);
 
 if (petersRightPayment > petersHouseCurrentPay) {
