@@ -64,3 +64,27 @@ getEventWeekday(9); // Logs out "Thursday"
 
 // With todays weekday a Friday
 getEventWeekday(1); // Logs out "Sunday"
+
+
+//===================================================================================================================
+// Weather wear
+
+const myClothes = {
+    nice: ["pants", "slacks", "shirts", "t-shirts", "sneakers", "scarf"],
+    cold: ["muffler", "thicker pants", "long sleeve", "jumper", "coat", "hunter boots"],
+    warm: ["shorts", "sleeveless", "birkenstock", "shades"],
+}
+
+function whatToWear(temperature) {
+    if (temperature >= 20) {
+        console.log(`Today is temperature is ${temperature} so it could be warm or hot ` + myClothes.warm);
+    } else if (10 < temperature && temperature < 20) {
+        console.log(`Today is awesome weather <3 with ${temperature} celcius, so wear ` + myClothes.nice);
+    } else if (temperature <= 10) {
+        console.log("Today will be bit chilly, better to wear more sis!" + myClothes.cold);
+    }
+}
+
+whatToWear(18);
+whatToWear(2);
+whatToWear(30);
