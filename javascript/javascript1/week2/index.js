@@ -70,9 +70,9 @@ getEventWeekday(1); // Logs out "Sunday"
 // Weather wear
 
 const myClothes = {
-    nice: ["pants", "slacks", "shirts", "t-shirts", "sneakers", "scarf"],
-    cold: ["muffler", "thicker pants", "long sleeve", "jumper", "coat", "hunter boots"],
-    warm: ["shorts", "sleeveless", "birkenstock", "shades"],
+    nice: ["pants", " slacks", " shirts", " t-shirts", " sneakers", " scarf"],
+    cold: ["muffler", " thicker pants", " long sleeve", " jumper", " coat", " hunter boots"],
+    warm: ["shorts", " sleeveless", " birkenstock", " shades"],
 }
 
 function whatToWear(temperature) {
@@ -88,3 +88,45 @@ function whatToWear(temperature) {
 whatToWear(18);
 whatToWear(2);
 whatToWear(30);
+
+
+//===================================================================================================================
+// Student Manager
+
+
+
+const class07Students = [];
+
+function addStudentToClass(studentName) {
+    if (!studentName) {
+        return;
+    }
+    if (studentName === "queen") {
+        class07Students.push(studentName);
+    }
+    if (class07Students.length >= 6) {
+        console.log("Cannot add more students to class 07");
+    } else if (class07Students.includes(studentName)) {
+        console.log(`Student ${studentName} is already in the class.`);
+    } else {
+        class07Students.push(studentName);
+        console.log(class07Students);
+    }
+}
+
+function getNumberOfStudents() {
+    console.log(class07Students.length);
+}
+
+
+addStudentToClass("Jiu");
+addStudentToClass("student1");
+addStudentToClass("student2");
+addStudentToClass("student3");
+addStudentToClass("student4");
+addStudentToClass("Jiu");
+addStudentToClass("student5");
+addStudentToClass("queen");
+getNumberOfStudents()
+
+console.dir(class07Students);
