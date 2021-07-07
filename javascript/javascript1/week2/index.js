@@ -103,8 +103,9 @@ function addStudentToClass(studentName) {
     }
     if (studentName === "queen") {
         class07Students.push(studentName);
+        console.log(class07Students);
     }
-    if (class07Students.length >= 6) {
+    if (class07Students.length > 6) {
         console.log("Cannot add more students to class 07");
     } else if (class07Students.includes(studentName)) {
         console.log(`Student ${studentName} is already in the class.`);
@@ -129,4 +130,53 @@ addStudentToClass("student5");
 addStudentToClass("queen");
 getNumberOfStudents()
 
-console.dir(class07Students);
+
+//===================================================================================================================
+// Candy helper optional
+
+const boughtCandyPrices = [];
+const candyPrice = {
+    Sweet: 0.5,
+    Chocolate: 0.7,
+    Toffee: 1.1,
+    Chewinggum: 0.03,
+}
+
+const amountToSpend = Math.random() * 100;
+
+function addCandy(candyType, weight) {
+    do {
+        boughtCandyPrices.push(candyPrice[candyType] * weight);
+        console.log(boughtCandyPrices);
+    }
+    while (canBuyMoreCandy == true) {}
+}
+
+addCandy("Toffee", 20);
+addCandy("Chocolate", 10);
+addCandy("Sweet", 10);
+
+
+function canBuyMoreCandy() { //returns a boolean if the user can buy more candy using the "boughtCandy" array
+    let currentAmount = 0;
+    for (let i in boughtCandyPrices) {
+        currentAmount += boughtCandyPrices[i];
+    }
+
+    if (currentAmount > amountToSpend) {
+        console.log("Enough candy for you!");
+        return false
+    } else {
+        console.log("You can buy more, so please do!");
+        return true
+    }
+    // do {
+    //     console.log("Let us buy more sweets!");
+    //     return true
+    // }
+    // while (amountToSpend > currentAmount) {
+    //     return false;
+    // }
+}
+
+canBuyMoreCandy();
