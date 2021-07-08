@@ -158,10 +158,13 @@ addCandy("Sweet", 10);
 
 
 function canBuyMoreCandy() { //returns a boolean if the user can buy more candy using the "boughtCandy" array
-    let currentAmount = 0;
-    for (let i in boughtCandyPrices) {
-        currentAmount += boughtCandyPrices[i];
-    }
+    // let currentAmount = 0;
+    // for (let i in boughtCandyPrices) {
+    //     currentAmount += boughtCandyPrices[i];
+    // }
+
+    const currentAmount = boughtCandyPrices.reduce((a, b) => a + b, 0);
+
 
     if (currentAmount > amountToSpend) {
         console.log("Enough candy for you!");
