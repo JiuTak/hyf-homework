@@ -1,15 +1,15 @@
 //===================================================================================================================
 //Flight booking fullname function
 
-// function getFullName(firstName, surName) {
-//     return firstName + surName
-// }
+function getFullName(firstName, surName) {
+    return firstName + surName
+}
 
-// console.log(getFullName("Benjamin", "Hughes"));
+console.log(getFullName("Benjamin", "Hughes"));
 
 // Formal fullname
 
-function getFullName(firstName, surName, useFormalName) {
+function getFormalFullName(firstName, surName, useFormalName) {
     if (useFormalName === true) {
         console.log(`Lord ${firstName} ${surName}`);
     } else if (useFormalName === false) {
@@ -25,23 +25,23 @@ getFullName("Benjamin", "Hughes", false); // without formal name
 
 // if is female?
 
-function getFullNameWithSex(firstName, surName, useFormalName, sex) {
-    if (sex === "female" && useFormalName === true) {
+function getFullNameWithSex(firstName, surName, useFormalName, isFemale) {
+    if (isFemale === "female" || isFemale === true && useFormalName === true) {
         console.log(`Lady ${firstName} ${surName}`);
-    } else if (sex === "female" && useFormalName === false) {
+    } else if (isFemale === "female" || isFemale === true && useFormalName === false) {
         console.log(firstName + ` ` + surName);
-    } else if (sex === "male" && useFormalName === true) {
+    } else if (isFemale === "male" || isFemale === false && useFormalName === true) {
         console.log(`Lord ${firstName} ${surName}`);
-    } else if (sex === "male" && useFormalName === false) {
+    } else if (isFemale === "male" || isFemale === false && useFormalName === false) {
         console.log(`${firstName} ${surName}`);
     } else
         console.log("Please put firstname and Surname correctly");
 }
 
-getFullNameWithSex("Jiu", "Tak", true, "female");
-getFullNameWithSex("Jiu", "Tak", false, "female");
-getFullNameWithSex("Jiu", "Tak", true, "male");
-getFullNameWithSex("Jiu", "Tak", false, "male");
+getFullNameWithSex("Jiu", "Tak", true, true);
+getFullNameWithSex("Jiu", "Tak", false, true);
+getFullNameWithSex("Jiu", "Tak", true, false);
+getFullNameWithSex("Jiu", "Tak", false, false);
 
 
 //===================================================================================================================
@@ -98,17 +98,18 @@ whatToWear(30);
 const class07Students = [];
 
 function addStudentToClass(studentName) {
-    if (!studentName) {
+    if (class07Students.includes(studentName)) { //check if the student name is duplicated or not
+        console.log(`Student ${studentName} is already in the class.`);
+    }
+    if (!studentName) { // check if student name is not null
         return;
     }
-    if (studentName === "queen") {
+    if (studentName === "queen") { //check if Qeen is gonna join the class
         class07Students.push(studentName);
         console.log(class07Students);
-    }
-    if (class07Students.length > 6) {
+    } else if (class07Students.length > 6) {
         console.log("Cannot add more students to class 07");
-    } else if (class07Students.includes(studentName)) {
-        console.log(`Student ${studentName} is already in the class.`);
+
     } else {
         class07Students.push(studentName);
         console.log(class07Students);
@@ -128,7 +129,10 @@ addStudentToClass("student4");
 addStudentToClass("Jiu");
 addStudentToClass("student5");
 addStudentToClass("queen");
+addStudentToClass("student6");
+
 getNumberOfStudents()
+
 
 
 //===================================================================================================================
@@ -162,7 +166,6 @@ function canBuyMoreCandy() { //returns a boolean if the user can buy more candy 
     // for (let i in boughtCandyPrices) {
     //     currentAmount += boughtCandyPrices[i];
     // }
-
     const currentAmount = boughtCandyPrices.reduce((a, b) => a + b, 0);
 
 
@@ -173,13 +176,6 @@ function canBuyMoreCandy() { //returns a boolean if the user can buy more candy 
         console.log("You can buy more, so please do!");
         return true
     }
-    // do {
-    //     console.log("Let us buy more sweets!");
-    //     return true
-    // }
-    // while (amountToSpend > currentAmount) {
-    //     return false;
-    // }
 }
 
 canBuyMoreCandy();
