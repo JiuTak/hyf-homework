@@ -89,7 +89,7 @@ seriesDurations.push({
 })
 
 function logOutSeriesText() {
-    // write code here
+    // try to change all 'time' into sec.
     const minutesInSeconds = 60;
     const hoursInSeconds = 3600;
     const daysInSeconds = 86400;
@@ -100,9 +100,9 @@ function logOutSeriesText() {
         let currentDuration = 0;
         let averageLifeSpan = 80 * yearsInSeconds;
 
-        currentDuration = currentDuration + (seriesDurations[i].minutes * minutesInSeconds);
-        currentDuration = currentDuration + (seriesDurations[i].hours * hoursInSeconds);
-        currentDuration = currentDuration + (seriesDurations[i].days * daysInSeconds);
+        currentDuration += (seriesDurations[i].minutes * minutesInSeconds);
+        currentDuration += (seriesDurations[i].hours * hoursInSeconds);
+        currentDuration += (seriesDurations[i].days * daysInSeconds);
 
         timeWastedInPercentage = (currentDuration / averageLifeSpan) * 100;
 
@@ -115,20 +115,55 @@ function logOutSeriesText() {
 logOutSeriesText(); // logs out the text found above
 
 
-// =======================================================================================================================================
-// =======================================================================================================================================
-//                                                       Smart-ease - Back to the basics!
-// =======================================================================================================================================
-// =======================================================================================================================================
-
-
-
-
-
 // ***************************************************************************************************************************************
 //                                                       NOnoN0nOYes (Note taking app)
 // ***************************************************************************************************************************************
+////////////////////  SAVE A NOTE  ////////////////////
+let notes = []; // create a variable called 'notes' and assign it to an empty arry.
 
+function saveNote(content, id) { // create a functionality to save a note
+    if (typeof content === 'string' && typeof id === 'number') {
+        notes.push({ content, id });
+    }
+}
+
+saveNote("Pick up groceries", 1);
+saveNote("Do laundry", 2);
+
+console.log(notes); // [{content: 'Pick up groceries', id: 1}, {content: 'Do laundry', id: 2}]
+
+
+////////////////////  GET A NOTE  ////////////////////
+function getNote(id) { // what if a user wants to see a specific note, but only remembers the id
+    // should return the relevant note object that corresponds to the id
+    // if no id is specified or if the id is not a number, log out an error string(Hint: use a for loop)
+    for (let i = 0; i < notes.length; i++) {
+        if (typeof id === 'number' && id === notes[i].id) {
+            return notes[i];
+        } else {
+            return console.log('Error');
+        }
+    }
+}
+const test = getNote();
+const test2 = getNote(test);
+const firstNote = getNote(1);
+console.log(firstNote); // {content: 'Pick up groceries', id: 1}
+
+
+
+////////////////////  LOG OUT NOTES  ////////////////////
+// user can both save and get a not
+function logOutNotesFormatted() { // what if the user just wants to read all his notes?
+    // when calling the function it should log this string out for every note.
+}
+
+logOutNotesFormatted(); // should log out the text below
+
+// The note with id: 1, has the following note text: Pick up groceries
+// The note with id: 2, has the following note text: Do laundry
+
+////////////////////  UNIQUE FEATURE  ////////////////////
 
 
 // ***************************************************************************************************************************************
