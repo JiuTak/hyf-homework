@@ -34,7 +34,6 @@ Hint: For formatting your best friend is Google!
 
 */
 
-
 const travelInformation = {
     speed: 50,
     destinationDistance: 432,
@@ -61,8 +60,6 @@ whenWillWeBeThere();
 //                                                      Series duration of my life
 // ***************************************************************************************************************************************
 
-
-
 const seriesDurations = [{
         title: "Game of thrones",
         days: 3,
@@ -82,3 +79,58 @@ const seriesDurations = [{
         minutes: 0,
     },
 ];
+
+//adding my favorite series.
+seriesDurations.push({
+    title: "Parks and Recreation",
+    days: 1,
+    hours: 21,
+    minutes: 50,
+})
+
+function logOutSeriesText() {
+    // write code here
+    const minutesInSeconds = 60;
+    const hoursInSeconds = 3600;
+    const daysInSeconds = 86400;
+    const yearsInSeconds = 31536000;
+    let sumOfTheTotalTime = 0;
+
+    for (let i = 0; i < seriesDurations.length; i++) {
+        let currentDuration = 0;
+        let averageLifeSpan = 80 * yearsInSeconds;
+
+        currentDuration = currentDuration + (seriesDurations[i].minutes * minutesInSeconds);
+        currentDuration = currentDuration + (seriesDurations[i].hours * hoursInSeconds);
+        currentDuration = currentDuration + (seriesDurations[i].days * daysInSeconds);
+
+        timeWastedInPercentage = (currentDuration / averageLifeSpan) * 100;
+
+        console.log(`${seriesDurations[i].title} took ${parseFloat(timeWastedInPercentage).toFixed(4)}% of my life`);
+        sumOfTheTotalTime += timeWastedInPercentage;
+    }
+
+    console.log(`\nIn total that is ${parseFloat(sumOfTheTotalTime).toFixed(4)}% of my life`);
+}
+logOutSeriesText(); // logs out the text found above
+
+
+// =======================================================================================================================================
+// =======================================================================================================================================
+//                                                       Smart-ease - Back to the basics!
+// =======================================================================================================================================
+// =======================================================================================================================================
+
+
+
+
+
+// ***************************************************************************************************************************************
+//                                                       NOnoN0nOYes (Note taking app)
+// ***************************************************************************************************************************************
+
+
+
+// ***************************************************************************************************************************************
+//                                              CactusIO-interactive (Smart phone usage app) optional
+// ***************************************************************************************************************************************
