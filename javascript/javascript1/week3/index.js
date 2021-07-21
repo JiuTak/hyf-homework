@@ -39,7 +39,7 @@ const travelInformation = {
     destinationDistance: 432,
 };
 
-function whenWillWeBeThere() {
+function getTime() {
     const estimatedTime = travelInformation.destinationDistance / travelInformation.speed;
     let hours = Math.floor(estimatedTime);
     let minutes = Math.floor((estimatedTime % 1) * 60);
@@ -47,12 +47,12 @@ function whenWillWeBeThere() {
     return `${hours} hours and ${minutes} minutes.`
 }
 
-const travelTime = whenWillWeBeThere(travelInformation);
+const travelTime = getTime(travelInformation);
 
 console.log((travelTime)); // 8 hours and 38 minutes
 
 
-whenWillWeBeThere();
+getTime();
 
 
 
