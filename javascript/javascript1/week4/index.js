@@ -102,6 +102,7 @@ function getReply(command) {
   // make a simple calculator
   else if (command.toLowerCase().includes("what is")) {
     const match = command.match(/(\d+)\s*([\+\-\*\/])\s*(\d+)/);
+    let result = 0;
     if (match) {
       if (match[2] === "+") {
         result = parseInt(match[1]) + parseInt(match[3]);
@@ -129,15 +130,14 @@ function getReply(command) {
 
       let timer = parseInt(match[0]) * 60 * 1000; //change the minute number into milliseconds
 
+      setTimeout(() => {
+        console.log(parseInt(match[0]) + " minute(s)" + "Timer done");
+      }, timer);
       // const minutes = Math.floor(timer / 60);
       // let seconds = timer % 60;
       // seconds = seconds < 10 ? "0" + seconds : seconds;
 
       // console.log(`${minutes} : ${seconds}`);
-
-      setTimeout(() => {
-        console.log(parseInt(match[0]) + " minute(s)" + "Timer done");
-      }, timer);
     }
   } else {
     console.log("Sorry, I didn't understand you. Please try again");
