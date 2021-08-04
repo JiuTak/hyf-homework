@@ -13,15 +13,15 @@ function getReply(command) {
   if (command.toLowerCase().includes("hello")) {
     //make tempArray and pick up the name
     userName = tempArray[tempArray.length - 1];
-    console.log(`Nice to meet you ${userName}`);
+    return `Nice to meet you ${userName}`;
   }
 
   //to differenciate the question, using includes what(but then should only asked "what is my name")
   else if (command.toLowerCase().includes("my name")) {
     if (userName != "") {
-      console.log(`Your name is ${userName}`);
+      return `Your name is ${userName}`;
     } else {
-      console.log("Sorry I don't know your name");
+      return "Sorry I don't know your name";
     }
   }
 
@@ -45,7 +45,7 @@ function getReply(command) {
 
     // push new todo item to todolist array
     todolist.push(todo);
-    console.log(`Added '${todo}' to your todo list, ${userName}`);
+    return `Added '${todo}' to your todo list, ${userName}`;
   }
 
   // remove todo item from todolist array
@@ -67,14 +67,12 @@ function getReply(command) {
     }
 
     let removeItem = todolist.splice(todo, 1);
-    console.log(`Removed '${removeItem}' from your todo, ${userName}`);
+    return `Removed '${removeItem}' from your todo, ${userName}`;
   }
 
   // checking and showing current todolist status
   else if (command.toLowerCase().includes("on my todo?")) {
-    console.log(
-      `You have ${todolist.length} todo(s).\n${userName}'s ToDo List = [${todolist}]`
-    );
+    return `You have ${todolist.length} todo(s).\n${userName}'s ToDo List = [${todolist}]`;
   }
 
   // show today's date
@@ -96,7 +94,7 @@ function getReply(command) {
     const today = new Date();
     var dd = String(today.getDate()).padStart(2, "0");
     var yyyy = today.getFullYear();
-    console.log(`${dd}. of ${monthNames[today.getMonth()]} ${yyyy}`);
+    return `${dd}. of ${monthNames[today.getMonth()]} ${yyyy}`;
   }
 
   // make a simple calculator
@@ -116,9 +114,9 @@ function getReply(command) {
       if (match[2] === "/") {
         result = parseInt(match[1]) / parseInt(match[3]);
       }
-      console.log(result);
+      return result;
     } else {
-      console.log("Sorry, please put right syntex");
+      return "Sorry, please put right syntex";
     }
   }
 
@@ -140,7 +138,7 @@ function getReply(command) {
       // console.log(`${minutes} : ${seconds}`);
     }
   } else {
-    console.log("Sorry, I didn't understand you. Please try again");
+    return "Sorry, I didn't understand you. Please try again";
   }
 }
 
