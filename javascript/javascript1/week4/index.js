@@ -18,7 +18,7 @@ function getReply(command) {
 
   //to differenciate the question, using includes what(but then should only asked "what is my name")
   else if (command.toLowerCase().includes("my name")) {
-    if (userName != "") {
+    if (userName !== "") {
       return `Your name is ${userName}`;
     } else {
       return "Sorry I don't know your name";
