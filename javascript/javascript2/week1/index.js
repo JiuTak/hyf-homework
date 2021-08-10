@@ -1,16 +1,16 @@
 /*==================================================
             Find the shortest word
 ==================================================*/
+const danishWords = ["bil", "plante", "kaffe", "bog", "ø", "planetarium"];
 
 function getShortestWord() {
-  console.log(
-    danishWords.reduce(function (a, b) {
-      return a.length <= b.length ? a : b;
-    })
-  );
+  let result = danishWords.reduce(function (a, b) {
+    return a.length <= b.length ? a : b;
+  });
+  return result;
 }
-const danishWords = ["bil", "plante", "kaffe", "bog", "ø", "planetarium"];
-getShortestWord(danishWords); // returns 'ø'
+
+console.log(getShortestWord(danishWords)); // returns 'ø'
 
 /*==================================================
         Find and count the Danish letters
@@ -79,6 +79,6 @@ const spritsName = [
   "Convivial Purple Cottontail2",
 ];
 
-// *********
-// Event types - Optional and a little tricky
-// *********
+/*==================================================
+        hyfBay - get the okay'est products here
+==================================================*/
