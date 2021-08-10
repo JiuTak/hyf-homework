@@ -8,22 +8,22 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <input type="radio" id="button" name="event-types" value="button">
-    <label for="button"> Button</label><br>
-
-    <input type="radio" id="hover" name="event-types" value="button">
-    <label for="hover"> Hover</label><br>
-
-    <input type="radio" id="textBox" name="event-types" value="button">
-    <label for="textBox"> Text Box</label><br> -->
-
     <div id="root">
-        <h2>Please Enter Your Name here: </h2>
-        <input type="text" id="nameArea" placeholder="Find my spirit animal" required>       <!-- create input element -->            
-        <button type="submit" onclick="getUserName(event)"> Summon </button>                
-        <p id="result"></p>
+        <h2> What would you like to see your spirit name with? </h2>        
+        <select id="animal-selection">
+            <option value="click">Button</option>
+            <option value="mouseover">Hover</option>
+            <option value="keyup">Text</option>
+        </select>
+
     </div>
 
+    <div class="hoverSelected">
+        <h2>Please Enter Your Name here: </h2>
+        <input type="text" id="nameArea" onmouseover="generateAnimalName(event)" onkeyup="generateAnimalName(event)" placeholder="Find my spirit animal" required>
+        <button type="submit" onclick="generateAnimalName(event)"> Summon </button>
+        <p id="result"></p>
+    </div>
 
 
 

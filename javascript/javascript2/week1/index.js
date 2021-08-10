@@ -47,8 +47,17 @@ const rootDiv = document.getElementById("root");
 const nameArea = document.getElementById("nameArea");
 const result = document.getElementById("result");
 
+// *********
+// Event types - Optional and a little tricky
+function generateAnimalName(e) {
+  var actionType = document.getElementById("animal-selection").value;
+  if (actionType == e.type) {
+    getUserName(e);
+  }
+}
+// *********
+
 function getUserName(e) {
-  console.log(1, nameArea.value != "");
   if (nameArea.value != "") {
     const randomItem =
       spritsName[Math.floor(Math.random() * spritsName.length)];
@@ -69,3 +78,7 @@ const spritsName = [
   "Steady Plum Boa2",
   "Convivial Purple Cottontail2",
 ];
+
+// *********
+// Event types - Optional and a little tricky
+// *********
