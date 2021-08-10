@@ -44,7 +44,28 @@ console.log(getDanishLetter(danishString2, letters)); // returns {total: 4, æ: 
 ==================================================*/
 
 const rootDiv = document.getElementById("root");
+const nameArea = document.getElementById("nameArea");
+const result = document.getElementById("result");
 
-function myFunction() {
-  etrName.innerHTML = "Helloooooo Jiu";
+function getUserName(e) {
+  console.log(1, nameArea.value != "");
+  if (nameArea.value != "") {
+    const randomItem =
+      spritsName[Math.floor(Math.random() * spritsName.length)];
+    result.innerHTML = nameArea.value + " - " + randomItem;
+  } else {
+    result.innerHTML = "Please enter your name";
+  }
 }
+const spritsName = [
+  "Contemplative Teal Beetle",
+  "Unwavering White Ridley",
+  "Sensible Fuchsia Mockingbird",
+  "Steady Plum Boa",
+  "Convivial Purple Cottontail",
+  "Contemplative Teal Beetle2",
+  "Unwavering White Ridley2",
+  "Sensible Fuchsia Mockingbird2",
+  "Steady Plum Boa2",
+  "Convivial Purple Cottontail2",
+];

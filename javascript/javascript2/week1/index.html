@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+    <!-- <input type="radio" id="button" name="event-types" value="button">
+    <label for="button"> Button</label><br>
+
+    <input type="radio" id="hover" name="event-types" value="button">
+    <label for="hover"> Hover</label><br>
+
+    <input type="radio" id="textBox" name="event-types" value="button">
+    <label for="textBox"> Text Box</label><br> -->
+
     <div id="root">
         <h2>Please Enter Your Name here: </h2>
-        <input type="text" name="" id="">       <!-- create input element -->       
-        <button id="etrName" onclick="myFunction()"> Summon my sprits animal</button>   <!-- create button so that set up events -->   
+        <input type="text" id="nameArea" placeholder="Find my spirit animal" required>       <!-- create input element -->            
+        <button type="submit" onclick="getUserName(event)"> Summon </button>                
+        <p id="result"></p>
     </div>
+
+
+
+
     <script src="index.js"></script>
 </body>
 </html>
