@@ -58,7 +58,7 @@ function generateAnimalName(e) {
 // *********
 
 function getUserName(e) {
-  if (nameArea.value != "") {
+  if (nameArea.value != "" && typeof nameArea.value === "string") {
     const randomItem =
       spritsName[Math.floor(Math.random() * spritsName.length)];
     result.innerHTML = nameArea.value + " - " + randomItem;
