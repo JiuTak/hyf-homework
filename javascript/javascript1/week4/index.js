@@ -4,6 +4,7 @@
 ***************************************************************************************************************************************
 */
 let userName = "";
+let userNameArray = [];
 let todolist = [];
 
 function getReply(command) {
@@ -13,6 +14,15 @@ function getReply(command) {
   if (command.toLowerCase().includes("hello")) {
     //make tempArray and pick up the name
     userName = tempArray[tempArray.length - 1];
+    //go through usernamearray to see if we recognize user
+    for (let i = 0; i < userNameArray.length; i++) {
+      if (userName === userNameArray[i]) {
+        return `Hej again, ${userName}`;
+      }
+    }
+    //if we don't recognize user add to array, and say hello to them
+    userNameArray.push(userName);
+    //if we recognize user say welcome back
     return `Nice to meet you ${userName}`;
   }
 
@@ -143,6 +153,8 @@ function getReply(command) {
 }
 
 console.log(getReply("Hello my name is Benjamin")); // "Nice to meet you benjamin"
+console.log(getReply("Hello my name is Jiu"));
+console.log(getReply("Hello my name is Benjamin"));
 console.log(getReply("What is my name?")); // "Your name is Benjamin"
 console.log(getReply("Add fishing to my todo")); // "fishing added to your todo"
 console.log(getReply("Add singing in the shower to my todo")); // Should add singing in the shower to a list of todos
