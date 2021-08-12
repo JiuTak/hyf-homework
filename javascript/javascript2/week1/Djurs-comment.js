@@ -1,5 +1,5 @@
-const danishString = "Jeg har en blå bil";
-getDanishLetter(danishString); // returns {total: 1, å: 1}
+// const danishString = "Jeg har en blå bil";
+// getDanishLetter(danishString); // returns {total: 1, å: 1}
 
 // const danishString2 = "Blå grød med røde bær";
 // getDanishLetter(danishString2); // returns {total: 4, æ: 1, ø: 2, å: 1}
@@ -28,19 +28,25 @@ function getDanishLetter(str) {
   } ${countÅ > 0 ? "Å: " + countÅ : ""}`;
 }
 
-let letters = ["æ", "ø", "å"];
+const danishString = "Jeg har en blå bil";
+console.log(getDanishLetter(danishString)); // returns {total: 1, å: 1}
 
-function getDanishLetter(string, letters) {
-  let obj = {};
-  let total = 0;
-  letters.forEach((letter) => {
-    let count = (string.match(new RegExp(letter, "g")) || []).length;
-    if (count > 0) {
-      obj[letter] = count;
-      total += count;
-    }
-  });
-  obj["total"] = total;
+const danishString2 = "Blå grød med røde bær";
+console.log(getDanishLetter(danishString2)); // returns {total: 4, æ: 1, ø: 2, å: 1}
 
-  return obj;
-}
+// let letters = ["æ", "ø", "å"];
+
+// function getDanishLetter(string, letters) {
+//   let obj = {};
+//   let total = 0;
+//   letters.forEach((letter) => {
+//     let count = (string.match(new RegExp(letter, "g")) || []).length;
+//     if (count > 0) {
+//       obj[letter] = count;
+//       total += count;
+//     }
+//   });
+//   obj["total"] = total;
+
+//   return obj;
+// }
