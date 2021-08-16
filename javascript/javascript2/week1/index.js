@@ -49,16 +49,21 @@ const result = document.getElementById("result");
 
 // *********
 // Event types - Optional and a little tricky
+const testBtn = document.querySelector("#test1");
+testBtn.addEventListener("click", generateAnimalName);
+nameArea.addEventListener("mouseover", generateAnimalName);
+nameArea.addEventListener("keyup", generateAnimalName);
+
 function generateAnimalName(e) {
   var actionType = document.getElementById("animal-selection").value;
-  if (actionType == e.type) {
+  if (actionType === e.type) {
     getUserName(e);
   }
 }
 // *********
 
 function getUserName(e) {
-  if (nameArea.value != "" && typeof nameArea.value === "string") {
+  if (nameArea.value !== "" && nameArea.value.trim()) {
     const randomItem =
       spritsName[Math.floor(Math.random() * spritsName.length)];
     result.innerHTML = nameArea.value + " - " + randomItem;
