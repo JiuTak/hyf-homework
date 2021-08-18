@@ -34,25 +34,17 @@ console.log(eightiesMovies);
 The tag is based on the rating: Good (>= 7), Average (>= 4 and < 7), Bad (< 4)
 ===============================================================*/
 
-const tags = []; //make an empty array
-
-movies.forEach((rate) => {
-  let reputation = "";
-  if (rate.rating >= 7) {
-    reputation = `rating: Good`;
-    tags.push(reputation);
+const tags = movies.map((movie) => {
+  if (movie.rating >= 7) {
+    movie.tag = "Good";
+  } else if (movie.rating >= 4 && movie.rating < 7) {
+    movie.tag = "Average";
+  } else if (movie.rating < 4) {
+    movie.tag = "Bad";
   }
-  if (rate.rating >= 4 && rate.rating < 7) {
-    reputation = `rating: Average`;
-    tags.push(reputation);
-  } else if (rate.rating < 4) {
-    reputation = `rating: Bad`;
-    tags.push(reputation);
-  } else return `Sorry`;
+  return movie;
 });
-
 console.log(tags);
-
 /*===============================================================
 5. Using chaining, first filter the movies array to only contain the movies rated higher than 6.
 Now map the movies array to only the rating of the movies.
