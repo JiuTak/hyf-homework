@@ -44583,3 +44583,5 @@ const movies = [
     running_times: 5580,
   },
 ];
+
+module.exports = { movies };
