@@ -64,7 +64,7 @@ console.log(greatMovies);
 So if there were 3 movies that contained Surfer, 1 with Alien and 2 with Benjamin, you would return 6.
 Can you make sure the search is case insensitive?
 ===============================================================*/
-let keywords = [];
+const keywords = [];
 
 let keywordsMovies = movies
   .filter(
@@ -74,7 +74,7 @@ let keywordsMovies = movies
       movyTitle.title.toLowerCase().includes("benjamin")
   )
   .map((movyTitle) => movyTitle.title);
-keywords.push(keywordsMovies);
+keywords.push(keywordsMovies.length);
 
 console.log(keywords);
 
@@ -103,14 +103,11 @@ console.log(duplicatedWord);
 8. Calculate the average rating of all the movies using reduce. Optional
 ===============================================================*/
 
-const averageRatingScore = movies
-  .map((moveiRatings) => moveiRatings.rating)
-  .reduce(function (avg, value, _, { length }) {
-    return avg + value / length;
-  }, 0)
-  .toFixed(2);
-
-console.log(averageRatingScore);
+let averageVal = movies
+  .map((movie) => movie.rating)
+  .reduce((result, currentValue) => result + currentValue);
+let averageRating = (averageVal / movies.length).toFixed(2);
+console.log(averageRating);
 
 /*===============================================================
 9. Count the total number of Good, Average and Bad movies using reduce.
