@@ -67,8 +67,13 @@ const maxPrice = document.getElementById("maxPriceBox");
 let userInputPrice = maxPrice.addEventListener("input", filterByMax);
 
 function filterByMax(event) {
-  const maxValue = event.target.value;
-  const compareValue = products.filter((product) => product.price <= maxValue);
-
-  renderProducts(compareValue);
-} // it should work same as searching product by name but it only works once
+  const maxValue = Number(event.target.value);
+  if (maxValue) {
+    const compareValue = products.filter(
+      (product) => product.price <= maxValue
+    );
+    renderProducts(compareValue);
+  } else {
+    renderProducts(products);
+  }
+}
