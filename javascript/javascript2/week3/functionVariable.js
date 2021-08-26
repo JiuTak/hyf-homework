@@ -24,6 +24,7 @@ function funct3() {
 funcArray.forEach((element) => {
   return element;
 });
+
 //**************************************************************************************
 // 2- Create a function as a const and try creating a function normally.
 //**************************************************************************************
@@ -43,15 +44,11 @@ funfunction();
 //**************************************************************************************
 
 const obj = {
-  Jiu: personalInfo(),
+  Jiu: function personalInfo(age, height) {
+    const userage = age;
+    const userheight = height;
+    const nationality = "Korean";
+    return `${userage} years old, ${userheight}cm tall and ${nationality}`;
+  },
 };
-
-function personalInfo() {
-  const age = 24;
-  const height = 173;
-  const nationality = "Korean";
-
-  return `${age} years old, ${height}cm tall and ${nationality}`;
-}
-
-console.log(Object.values(obj));
+console.log(obj.Jiu(24, 173));
