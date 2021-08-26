@@ -92,19 +92,11 @@ function getLocation() {
 }
 
 //**************************************************************************************
-// 6. Optional Now show that location on a map using fx the Google maps api
+// 6. (Optional) Now show that location on a map using fx the Google maps api
 //**************************************************************************************
-// const mapLocation = document.getElementById('logcationMap')
-// mapLocation.addEventListener('click', showPosition)
-
-// function showPosition(position) {
-//   let latlon = position.coords.latitude + "," + position.coords.longitude;
-
-//   let img_url = "https://maps.googleapis.com/maps/api/staticmap?center=
-//   "+ latlon +"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
-
-//   document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
-// }
+//§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+// § Skipping Optional §
+//§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
 
 //**************************************************************************************
 // 7. Create a function called runAfterDelay.
@@ -143,17 +135,11 @@ function dblclk() {
 //**************************************************************************************
 
 function jokeCreator(shouldTellFunnyJoke, logFunnyJoke, logBadJoke) {
-  //   if (
-  //     typeof shouldTellFunnyJoke === "Boolean" &&
-  //     typeof logFunnyJoke == "function" &&
-  //     typeof logBadJoke == "function"
-  //   ) {
   if (shouldTellFunnyJoke !== true) {
     logBadJoke();
   } else {
     logFunnyJoke();
   }
-  //   }
 }
 
 function logFunnyJoke() {
