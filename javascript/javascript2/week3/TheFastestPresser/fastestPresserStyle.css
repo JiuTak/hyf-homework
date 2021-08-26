@@ -1,0 +1,86 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+}
+
+.container {
+  text-align: center;
+}
+
+#userInput {
+  height: 30px;
+  width: 300px;
+}
+
+#start-btn {
+  width: 150px;
+  height: 80px;
+  font-size: 1.25rem;
+  background-color: #44b95e;
+  border: unset;
+  color: aliceblue;
+  font-weight: 900;
+}
+
+#reset-btn {
+  width: 50px;
+  height: 30px;
+  font-size: 0.875rem;
+}
+
+#time-checking {
+  font-size: 2rem;
+  margin-bottom: unset;
+}
+
+.click-area {
+  border-top: 5px solid black;
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+}
+
+.divider {
+  text-align: center;
+  border-left: 6px solid rgb(62, 63, 62);
+  height: 500px;
+}
+
+#left-click-area,
+#right-click-area {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  background-color: black;
+}
+
+#left-click-area p,
+#right-click-area p {
+  text-align: center;
+  padding-top: 10rem;
+  font-size: 2rem;
+  margin-bottom: unset;
+  color: white;
+  font-family: "Pacifico", cursive;
+}
+
+#clickCounterS,
+#clickCounterL {
+  font-size: 1.275rem !important;
+  padding: unset !important;
+  margin-top: unset !important;
+  color: white;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
