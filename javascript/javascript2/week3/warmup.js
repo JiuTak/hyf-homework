@@ -47,25 +47,19 @@ function ex3() {
 //    Try call the third function once with the Earth function and once with the Saturn function.
 //**************************************************************************************
 
-function earthLogger() {
+const x = () => {
   console.log(`Earth`);
-}
-function saturnLogger() {
+};
+const y = () => {
   console.log(`Saturn`);
+};
+
+function logoutPlanet(planetLogFunction) {
+  planetLogFunction();
 }
 
-function planetLogFunction(string) {
-  if (string === earthLogger) {
-    earthLogger();
-  }
-  if (string === saturnLogger) {
-    saturnLogger();
-  }
-  return null;
-}
-
-planetLogFunction(earthLogger);
-planetLogFunction(saturnLogger);
+logoutPlanet(x);
+logoutPlanet(y);
 
 //**************************************************************************************
 // 5. Create a button with the text called "Log location".
