@@ -50,12 +50,9 @@ console.log(tags);
 Now map the movies array to only the rating of the movies.
 ===============================================================*/
 
-let greatMovies = [];
-
-let test = movies
+let greatMovies = movies
   .filter((goodMovie) => goodMovie.rating > 6)
   .map((ratedMovies) => ratedMovies.rating);
-greatMovies.push(test);
 
 console.log(greatMovies);
 
@@ -64,9 +61,7 @@ console.log(greatMovies);
 So if there were 3 movies that contained Surfer, 1 with Alien and 2 with Benjamin, you would return 6.
 Can you make sure the search is case insensitive?
 ===============================================================*/
-const keywords = [];
-
-let keywordsMovies = movies
+const keywords = movies
   .filter(
     (movyTitle) =>
       movyTitle.title.toLowerCase().includes("surfer") ||
@@ -74,9 +69,8 @@ let keywordsMovies = movies
       movyTitle.title.toLowerCase().includes("benjamin")
   )
   .map((movyTitle) => movyTitle.title);
-keywords.push(keywordsMovies.length);
 
-console.log(keywords);
+console.log(keywords.length);
 
 /*===============================================================
 7. Create an array of movies where a word in the title is duplicated.

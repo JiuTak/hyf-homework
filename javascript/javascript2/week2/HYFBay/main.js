@@ -8,7 +8,7 @@ const productList = document.getElementById("productsList");
 
 function renderProducts(products) {
   //ensure list is empty
-  deleteChild();
+  deleteChild(); // or productsUl.innerHTML = ''; could do same.
 
   products.forEach((product) => {
     const li = document.createElement("li");
