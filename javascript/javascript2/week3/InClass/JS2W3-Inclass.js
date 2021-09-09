@@ -56,14 +56,24 @@ console.log("is this woring?");
                         Mouse position
 =================================================================*/
 
-const photoArea = document.getElementsByClassName("class1");
+// const photoArea = document.getElementsByClassName("class1");
 
-document.body.addEventListener("click", function (e) {
-  console.log("X is: " + e.pageX);
-  console.log("Y is: " + e.pageY);
-});
+// document.body.addEventListener("click", function (e) {
+//   console.log("X is: " + e.pageX);
+//   console.log("Y is: " + e.pageY);
+// });
 
-document.getElementById("class1").addEventListener("mousemove", function (e) {
-  console.log("Mousevoce X is: " + e.pageX);
-  console.log("Mousevoce Y is: " + e.pageY);
-});
+// document.getElementById("class1").addEventListener("mousemove", function (e) {
+//   console.log("Mousevoce X is: " + e.pageX);
+//   console.log("Mousevoce Y is: " + e.pageY);
+// });
+
+const testbtn = document.querySelector("#test");
+testbtn.addEventListener('click', testFn)
+
+function testFn() {
+
+  setTimeout(() => {
+    console.log("clicked");
+  }, 5000);
+}

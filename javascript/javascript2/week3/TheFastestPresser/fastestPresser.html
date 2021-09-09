@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="confetti-js-master/dist/index.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The fastest presser in this realm! </title>
+    <link rel="stylesheet" href="fastestPresserStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1> Fastest presser</h1>
+    <div class="container">
+        <input type="number" id="userInput" placeholder="Set seconds" required>
+        <button id="reset-btn"> reset</button><br><br><br>
+        <button id="start-btn"> Start game!</button><br><br>
+        <p id="time-checking"></p><br>
+    </div>
+    
+    <div class="click-area">
+        <div id="left-click-area">
+            <canvas id="my-canvas1"></canvas>
+            <p>Press S</p>
+            <p id="clickCounterS"></p>
+        
+        </div>
+        <div class="divider">            
+        </div>
+        <div id="right-click-area">
+            <canvas id="my-canvas2"></canvas>
+            <p>Press L</p>
+            <p id="clickCounterL"></p>
+        </div>
+    </div>
+    <script src="fastestPresser.js"></script>
+</body>
+</html>
