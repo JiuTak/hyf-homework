@@ -33,11 +33,9 @@ ex2(3, "This string logged after 3 seconds");
 //**************************************************************************************
 const button1 = document.getElementById("ex3");
 
-button1.addEventListener("click", ex3);
-
-function ex3() {
+button1.addEventListener("click", () => {
   ex2(5, "Called after 5 seconds");
-}
+});
 
 //**************************************************************************************
 // 4. Create two functions and assign them to two different variables.
@@ -100,11 +98,11 @@ function getLocation() {
 //**************************************************************************************
 
 function runAfterDelay(delay, callback) {
-  let delayTid = delay * 1000;
+  let delayTime = delay * 1000;
 
   setTimeout(() => {
     callback();
-  }, delayTid);
+  }, delayTime);
 }
 
 runAfterDelay(4, function () {

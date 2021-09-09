@@ -18,7 +18,7 @@ const resetButton = document.getElementById("reset-btn");
 
 startButton.addEventListener("click", gameStart);
 resetButton.addEventListener("click", resetStatus);
-document.addEventListener("keypress", playCount);
+document.addEventListener("keydown", playCount);
 let countS = 0;
 let countL = 0;
 isPlaying = false;
