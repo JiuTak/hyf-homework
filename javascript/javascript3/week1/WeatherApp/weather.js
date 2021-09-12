@@ -88,7 +88,11 @@ async function showWeather(lat, lon) {
     console.log(weatherData);
 
     const cityWhere = weatherData.name;
-    city.innerHTML = `${cityWhere}`;
+    if (cityWhere === undefined) {
+      alert(`plz put right city's name`);
+    } else {
+      city.innerHTML = `${cityWhere}`;
+    }
 
     weatherDiscription.innerHTML = weatherData.weather[0].description;
 
