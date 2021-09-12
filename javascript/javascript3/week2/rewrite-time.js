@@ -22,18 +22,22 @@ getCurrentLocation()
   });
 
 // console.log(`this is inside of the async function`);
-async function getCurrentLocation() {
-  return new Promise((resolve) => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      const latitue = position.coords.latitude;
-      const longitute = position.coords.longitude;
-      position = { latitue, longitute };
-      resolve(position);
-    });
+function getCurrentLocation() {
+  return new Promise((resolve, reject) => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        const latitue = position.coords.latitude;
+        const longitute = position.coords.longitude;
+        position = { latitue, longitute };
+        resolve(position);
+      });
+    } else {
+      reject;
+    }
   });
 }
 
-async function setTimeoutPromise(sec) {
+function setTimeoutPromise(sec) {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve();
