@@ -37,7 +37,7 @@ WHERE title LIKE "%database%" or description LIKE "%database%";
 
 
 -- Get the title and status (as text) of all tasks
-SELECT task.id, task.title, task.description, s.name, s.id as status_id
+SELECT task.title, s.name as status_id
 FROM task
 JOIN status s on s.id = task.status_id;
 
