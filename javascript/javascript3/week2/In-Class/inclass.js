@@ -42,29 +42,29 @@
 //======================================================================
 // Exercise 3
 //======================================================================
-// function YesNoFail4Seconds() {
-//   console.log("Start getting yes/no");
+function YesNoFail4Seconds() {
+  console.log("Start getting yes/no");
 
-//   return new Promise((resolve, reject) => {
-//     const decision = Math.floor(Math.random() * 3);
-//     console.log(` decision is = ${decision}`);
-//     setTimeout(() => {
-//       if (decision === 0) {
-//         resolve("yes");
-//       } else if (decision === 1) {
-//         resolve("no");
-//       } else reject("failure!!");
-//     }, 4000);
-//   });
-// }
+  return new Promise((resolve, reject) => {
+    const decision = Math.floor(Math.random() * 3);
+    console.log(` decision is = ${decision}`);
+    setTimeout(() => {
+      if (decision === 0) {
+        resolve("yes");
+      } else if (decision === 1) {
+        resolve("no");
+      } else reject("failure!!");
+    }, 4000);
+  });
+}
 
-// YesNoFail4Seconds()
-//   .then((returnHelloObject) => {
-//     console.log(`The answer is ${returnHelloObject}`);
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
+YesNoFail4Seconds()
+  .then((returnHelloObject) => {
+    console.log(`The answer is ${returnHelloObject}`);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 //======================================================================
 // Exercise 4
@@ -73,26 +73,26 @@
 // Sometimes it should resolve and sometimes it should reject.
 // Look into Math.random
 
-// getLoggedInUsers() //caller / creation
-//   .then((users) => {
-//     console.log(users); // ['benna', 'magdy', 'carolina']
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
+getLoggedInUsers() //caller / creation
+  .then((users) => {
+    console.log(users); // ['benna', 'magdy', 'carolina']
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
-// const studentList = ["jiu", "Flori", "Saloumeh"];
+const studentList = ["jiu", "Flori", "Saloumeh"];
 
-// async function getLoggedInUsers() {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       const index = Math.floor(Math.random() * studentList.length);
+async function getLoggedInUsers() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const index = Math.floor(Math.random() * studentList.length);
 
-//       resolve(studentList[index]);
-//       reject(`owwww failed`);
-//     }, 5000);
-//   });
-// }
+      resolve(studentList[index]);
+      reject(`owwww failed`);
+    }, 5000);
+  });
+}
 
 //======================================================================
 // Exercise 5
