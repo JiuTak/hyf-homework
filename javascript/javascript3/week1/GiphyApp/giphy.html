@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="giphy.css" />
+    <title>Jiu's Giphy API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Giphy searcher</h1>
+    <div class="search-part">
+      <div class="input-field">
+        <input
+          type="text"
+          name=""
+          id="user-input-search"
+          class="align"
+          placeholder="Search for gif"
+        />
+        <br />
+        <input
+          type="number"
+          name=""
+          id="user-input-number"
+          class="align"
+          placeholder="Number of gif"
+        /><br />
+      </div>
+      <div class="btn-area">
+        <button id="search-btn" class="align">Search Gif</button><br />
+        <!-- <button id="reset-btn">RESET</button> -->
+      </div>
+    </div>
+    <span id="result"></span>
+    <script src="giphy.js"></script>
+  </body>
+</html>
