@@ -1,8 +1,8 @@
 const userList = document.getElementById("hyf-people");
 
-const peopleName = ["FlorentinaPetica", "suvarna-ratna", "JiuTak"];
+const responsePromise = ["FlorentinaPetica", "suvarna-ratna", "JiuTak"];
 
-const responsedData = peopleName.map((names) =>
+const responsedData = responsePromise.map((names) =>
   fetch(`https://api.github.com/search/repositories?q=user:${names}`)
 );
 
@@ -27,12 +27,16 @@ Promise.all(responsedData)
 
       // getting Repo's name
       separated.forEach((lists) => {
-        const repoList = document.createElement("li");
-        repoList.innerHTML = lists.name + ": " + lists.html_url;
-        repositoryList.append(repoList);
+        printOutElement(lists);
       });
     });
   })
   .catch((err) => {
     console.error(err);
   });
+
+function printOutElement(lists) {
+  const repoList = document.createElement("li");
+  repoList.innerHTML = lists.name + ": " + lists.html_url;
+  repositoryList.append(repoList);
+}
