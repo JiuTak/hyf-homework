@@ -46,9 +46,8 @@ h2{
     margin: 1rem;
 }
 
-
-.display {
-    border: 1px solid black;
+.result-area {
+    width: 70%;
 }
 
 #item-list {
@@ -56,7 +55,17 @@ h2{
     flex-direction: column;
     text-align: left;
     font-size: 1rem;
-    width: 60%;
+    width: 100%;
+    /* margin: 2rem; */
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: unset;
 }
 
 li {
@@ -67,8 +76,13 @@ h3 {
     /* position: absolute; */
     float: left;
 }
+
 h4 {
     float: right;
-    font-size: 1.2rem;
+    padding-left: 1.5rem;
+    color: rgb(39, 39, 39);
 }
 
+button {
+    float: right;
+}
