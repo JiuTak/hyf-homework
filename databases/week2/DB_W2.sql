@@ -78,3 +78,4 @@ WHERE title LIKE "%hyf%";
 DELETE 
 FROM task 
 WHERE id = 7;
+ 
