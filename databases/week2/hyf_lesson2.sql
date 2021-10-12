@@ -11,11 +11,17 @@ WHERE
   user.email LIKE "%@spotify.com"
   AND user.id = user_task.user_id
   AND user_task.task_id = task.id;
-
-
-select task.id,task.title,user.email ,user.id as UI,user.name from task
-join user on task.id=user.id
-where user.email like "%@spotify.com%";
+select
+  task.id,
+  task.title,
+  user.email,
+  user.id as UI,
+  user.name
+from
+  task
+  join user on task.id = user.id
+where
+  user.email like "%@spotify.com%";
 -- Get all the tasks for 'Donald Duck' with status 'Not started'
 SELECT
   user.name AS user_name,
@@ -60,15 +66,16 @@ WHERE
   AND user.id = user_task.user_id
   AND user_task.task_id = task.id
   AND month(created) = 09;
-
-
-
-  SELECT title, month(created), user.name Created_by
-FROM task
-  JOIN user
-  ON task.id=user.id
-WHERE user.name = 'Maryrose Meadows' AND month(created)=(09);
-
+SELECT
+  title,
+  month(created),
+  user.name Created_by
+FROM
+  task
+  JOIN user ON task.id = user.id
+WHERE
+  user.name = 'Maryrose Meadows'
+  AND month(created) =(09);
 -- Find how many tasks where created in each month,
   -- e.g. how many tasks were created in october, how many tasks were created in november,
   -- etc. (hint: use group by)

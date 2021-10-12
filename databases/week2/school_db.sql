@@ -1,5 +1,5 @@
 -- PART2: SCHOOL DATABASE
---CREATE DATABASE school_db;
+-- CREATE DATABASE school_db;
 USE school_db;
 CREATE TABLE `class` (
   `id` int(10) AUTO_INCREMENT PRIMARY KEY,
