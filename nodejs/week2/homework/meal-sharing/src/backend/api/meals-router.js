@@ -3,12 +3,30 @@ const router = express.Router();
 
 const meals = require("../data/meals.json");
 
-router.get("/", async (request, response, next) => {
+router.get("/", async (request, response) => {
   try {
     let newMeals = meals;
-    const { obj, maxPrice, searchTitle, createdAfter, limit } = request.query; // this is for checking if there are "Correct" queries
-    // Get meals that has a price smaller than maxPrice
-    if (maxPrice || searchTitle || createdAfter || limit) {
+    const { maxPrice, searchTitle, createdAfter, limit } = request.query;
+    const queryArray = [
+      "obj",
+      "maxPrice",
+      "searchTitle",
+      "createdAfter",
+      "limit",
+    ];
+    const userQueries = Object.keys(request.query);
+    const comparedQuries = [];
+
+    for (let i = 0; i < queryArray.length; i++) {
+      for (let j = 0; j < userQueries.length; j++) {
+        if (userQueries[j] === queryArray[i]) {
+          comparedQuries.push(userQueries[j]);
+        }
+      }
+    }
+
+    if (comparedQuries.length == userQueries.length) {
+      // Get meals that has a price smaller than maxPrice
       if (maxPrice) {
         newMeals = newMeals.filter((meal) => meal.price <= parseInt(maxPrice));
       }
@@ -31,12 +49,14 @@ router.get("/", async (request, response, next) => {
       if (limit) {
         newMeals = newMeals.splice(0, limit);
       }
+
+      // Correct queries but no data to return
+      if (newMeals < 1) {
+        return response.send("No matched data");
+      }
       response.json(newMeals);
-    } else if (
-      obj && // 👈 null and undefined check
-      Object.keys(obj).length !== 0
-    ) {
-      return response.send("Wrong!!! Please put correct query");
+    } else {
+      response.send("Please put correct query");
     }
   } catch (error) {
     throw error;
@@ -46,7 +66,7 @@ router.get("/", async (request, response, next) => {
 router.get("/:id", async (request, response) => {
   const mealsId = Number(request.params.id);
   const matchingMeals = meals.filter((meal) => meal.id === mealsId);
-  console.log(matchingMeals);
+  // console.log(matchingMeals);
   if (matchingMeals.length > 0) {
     response.send(matchingMeals);
   } else response.send(`Dose not exist`);
