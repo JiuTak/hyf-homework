@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App{
+
+}
+
+ul {
+  text-align: left;
+} 
+
+li {
+  text-align: left;
+  list-style: none;
+  line-height: 2rem;
+}
+
+.inputBox {
+  width: 20px;
+}
