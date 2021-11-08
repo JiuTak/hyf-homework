@@ -4,10 +4,10 @@
 SELECT
   *
 FROM
-  meal;
+  meals;
 -- Add a new meal
 INSERT INTO
-  meal (
+  meals (
     title,
     description,
     location,
@@ -30,13 +30,13 @@ VALUES
 SELECT
   *
 FROM
-  meal
+  meals
 WHERE
   id = 5;
 -- Update a meal with any id, fx 1.
   -- Update any attribute fx the title or multiple attributes
 UPDATE
-  meal
+  meals
 SET
   location = "Østerbro",
   max_reservations = 10
@@ -44,7 +44,7 @@ WHERE
   id = 4;
 -- Delete a meal with any id, fx 1
 DELETE FROM
-  meal
+  meals
 WHERE
   id = 6;
 --******************   RESERVATION QUERY **********************
@@ -52,10 +52,10 @@ WHERE
 SELECT
   *
 FROM
-  reservation;
+  reservations;
 -- Add a new reservation
 INSERT INTO
-  reservation (
+  reservations (
     number_of_guests,
     meal_id,
     created_date,
@@ -76,13 +76,13 @@ VALUES
 SELECT
   *
 FROM
-  reservation
+  reservations
 WHERE
   id = 1;
 -- Update a reservation with any id, fx 1.
   -- Update any attribute fx the title or multiple attributes
 UPDATE
-  reservation
+  reservations
 SET
   number_of_guests = 8,
   contact_name = 'Sunil',
@@ -91,7 +91,7 @@ WHERE
   id = 7;
 -- Delete a reservation with any id, fx 1
 DELETE FROM
-  reservation
+  reservations
 WHERE
   id = 6;
 --*********************  REVIEW QUERY ************************
@@ -99,23 +99,23 @@ WHERE
 SELECT
   *
 FROM
-  review;
+  reviews;
 -- Add a new review
 INSERT INTO
-  review (title, description, meal_id, stars, created_date)
+  reviews (title, description, meal_id, stars, created_date)
 VALUES
   ("good", "was fun", 5, 4, "2021-10-17");
 -- Get a review with any id, fx 1
 SELECT
   *
 FROM
-  review
+  reviews
 WHERE
   id = 4;
 -- Update a review with any id, fx 1.
   -- Update any attribute fx the title or multiple attributes
 UPDATE
-  review
+  reviews
 SET
   title = "nice",
   stars = 4.5
@@ -123,7 +123,7 @@ WHERE
   id = 4;
 -- Delete a review with any id, fx 1
 DELETE FROM
-  review
+  reviews
 WHERE
   id = 4;
 -- ##################### Additional    Queries #####################
@@ -131,24 +131,24 @@ WHERE
 SELECT
   *
 FROM
-  meal
+  meals
 WHERE
   price < 150;
 -- Get meals that still has available reservations
 SELECT
-  meal.id,
-  meal.title,
-  meal.description,
-  meal.when_date,
-  meal.max_reservations,
-  SUM(reservation.number_of_guests)
+  meals.id,
+  meals.title,
+  meals.description,
+  meals.when_date,
+  meals.max_reservations,
+  SUM(reservations.number_of_guests)
 FROM
-  meal
-  JOIN reservation ON reservation.meal_id = meal.id
+  meals
+  JOIN reservations ON reservations.meal_id = meals.id
 GROUP BY
-  meal.id
+  meals.id
 ORDER BY
-  meal.id ASC;
+  meals.id ASC;
 -- Get meals that partially match a title.
   -- (Rød grød med will match the meal with the title Rød grød med fløde)
 SELECT
