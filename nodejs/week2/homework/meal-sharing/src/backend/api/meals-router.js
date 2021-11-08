@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const _ = require("underscore");
 
 const meals = require("../data/meals.json");
 
@@ -15,15 +16,7 @@ router.get("/", async (request, response) => {
       "limit",
     ];
     const userQueries = Object.keys(request.query);
-    const comparedQuries = [];
-
-    for (let i = 0; i < queryArray.length; i++) {
-      for (let j = 0; j < userQueries.length; j++) {
-        if (userQueries[j] === queryArray[i]) {
-          comparedQuries.push(userQueries[j]);
-        }
-      }
-    }
+    const comparedQuries = _.intersection(userQueries, queryArray);
 
     if (comparedQuries.length == userQueries.length) {
       // Get meals that has a price smaller than maxPrice
@@ -56,10 +49,10 @@ router.get("/", async (request, response) => {
       }
       response.json(newMeals);
     } else {
-      response.send("Please put correct query");
+      response.send("Please put correct query").status(200);
     }
   } catch (error) {
-    throw error;
+    throw response.status(500).send(error);
   }
 });
 
