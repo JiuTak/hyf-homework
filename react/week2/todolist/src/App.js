@@ -1,22 +1,17 @@
 import "./App.css";
-import TodoList from "./TodoList";
-import SubTodoList from "./SubTodoList";
-
-const HighPriority = [
-  "do Danish homework",
-  "do React homework",
-  "grocery shop",
-];
+import Todo from "./components/Todo";
+import TodoList from "./components/TodoLists";
+import TodoForm from "./components/TodoForm";
 
 function App() {
   return (
     <div className="lists">
-      <ul className="App">
-        {HighPriority.map((todo) => {
-          return <TodoList key={todo} todo={todo} />;
-        })}
-        <SubTodoList subtodo="cleaning house" />
-      </ul>
+      <h1> Todo list</h1>
+      <p> You have used {} seconds on this page</p>
+
+      <div className="todo-app">
+        <TodoForm />
+      </div>
     </div>
   );
 }
