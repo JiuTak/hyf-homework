@@ -1,33 +1,57 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 function TodoForm(props) {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(props.edit ? props.edit.value : "");
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  });
 
   const handleChange = (event) => {
     setInput(event.target.value);
   };
 
   const handleSubmit = (event) => {
-    // event.preventDefault();
-    // props.onSubmit({
-    //   id: Math.floor(Math.random() * 1000),
-    //   text: input,
-    // });
+    event.preventDefault();
+    props.onSubmit({
+      id: Math.floor(Math.random() * 10000),
+      text: input,
+    });
 
     setInput("");
   };
 
   return (
     <form className="todo-form" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Add to do"
-        value={input}
-        name="text"
-        className="todo-input"
-        onChange={handleChange}
-      />
-      <button className="todo-btn">Add todo</button>
+      {props.edit ? 
+      (
+        <>
+          <input
+            type="text"
+            placeholder="Update your Todo"
+            value={input}
+            name="text"
+            className="todo-input edit"
+            onChange={handleChange}
+            ref={inputRef}
+          />
+          <button className="todo-btn edit">Update todo</button>
+        </>
+      ) : (
+        <>
+          <input
+            type="text"
+            placeholder="Add to do"
+            value={input}
+            name="text"
+            className="todo-input"
+            onChange={handleChange}
+            ref={inputRef}
+          />
+          <button className="todo-btn">Add todo</button>
+        </>
+      )}
     </form>
   );
 }

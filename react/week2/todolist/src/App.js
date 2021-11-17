@@ -10,7 +10,7 @@ function App() {
       <p> You have used {} seconds on this page</p>
 
       <div className="todo-app">
-        <TodoForm />
+        <TodoList />
       </div>
     </div>
   );
