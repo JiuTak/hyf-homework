@@ -4,7 +4,7 @@ import TodoLists from "./TodoLists";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
 
-function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
+function Todo({ todo, completeTodo, removeTodo, updateTodo,index }) {
   const [edit, setEdit] = useState({
     id: null,
     value: "",
@@ -19,7 +19,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
     return <TodoForm edit={edit} onSubmit={submitUpdate} />;
   }
 
-  return todos.map((todo, index) => (
+  return  (
     <div
       className={todo.isComplete ? "todo-row complete" : "todo-row"}
       key={index}
@@ -38,7 +38,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
         />
       </div>
     </div>
-  ));
+  );
 }
 
 export default Todo;
