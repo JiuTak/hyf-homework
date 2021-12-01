@@ -29,7 +29,7 @@ function MainPage() {
           users.map((user) => {
             return (
               <li>
-                {user.login} <a href="user.html_url"> {user.html_url} </a>
+                <a href="user.html_url">{user.login} </a>
               </li>
             );
           })
