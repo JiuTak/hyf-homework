@@ -8,6 +8,7 @@ export const Provider = ({ children }) => {
   const [userSearchInput, setUserSearchInput] = useState("");
   const [error, setError] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
+  const [count, setCount] = useState(0);
 
   const fetchUsers = async (userInput) => {
     try {
@@ -23,6 +24,7 @@ export const Provider = ({ children }) => {
           console.log(data);
           setUsers(data.items);
           setIsLoaded(true);
+          setCount(data.total_count);
         });
     } catch (error) {
       setError(error.message);
@@ -47,6 +49,7 @@ export const Provider = ({ children }) => {
         setUserSearchInput,
         error,
         isLoaded,
+        count,
       }}
     >
       {children}

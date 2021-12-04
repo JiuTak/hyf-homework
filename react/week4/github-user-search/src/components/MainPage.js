@@ -1,20 +1,25 @@
 import React from "react";
-import { useContext } from "react";
-import { Context, useUser } from "./ContextUser";
+import { useUser } from "./ContextUser";
 
 function MainPage() {
-  const context = useContext(Context);
-  const { users, isLoaded, error, total_count } = useUser();
+  const {
+    users,
+    isLoaded,
+    error,
+    count,
+    userSearchInput,
+    setUserSearchInput,
+  } = useUser();
 
   return (
     <div>
       <h1> Github user searcher</h1>
       <input
         type="text"
-        value={context.userSearchInput}
+        value={userSearchInput}
         onChange={(e) => {
           const inputValue = e.target.value;
-          context.setUserSearchInput(inputValue);
+          setUserSearchInput(inputValue);
         }}
       />
 
@@ -23,7 +28,7 @@ function MainPage() {
           <li>Loading...</li>
         ) : error ? (
           <li>{error}</li>
-        ) : total_count === 0 ? (
+        ) : count === 0 ? (
           <li>No Items...</li>
         ) : (
           users.map((user) => {

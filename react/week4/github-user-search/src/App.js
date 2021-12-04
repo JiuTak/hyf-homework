@@ -1,10 +1,13 @@
 import "./App.css";
 import MainPage from "./components/MainPage";
+import { Provider } from "./components/ContextUser";
 
 function App() {
   return (
     <div className="App">
-      <MainPage />
+      <Provider>
+        <MainPage />
+      </Provider>
     </div>
   );
 }
