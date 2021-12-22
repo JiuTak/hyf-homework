@@ -1,6 +1,6 @@
 spinach
 carrots
-Artichoke
+celery
 kale
 brussels sprouts
 Asparagus
