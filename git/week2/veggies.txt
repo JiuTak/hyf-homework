@@ -3,3 +3,5 @@ carrots
 celery
 kale
 brussels sprouts
+Asparagus
+Cauliflower
